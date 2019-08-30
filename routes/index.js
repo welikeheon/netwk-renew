@@ -14,4 +14,8 @@ router.get('/professor', (req, res, next) => {
     res.render('professor/professor_0100');
 });
 
+router.get('/hello', (req, res, next) => {
+    res.send("Hello?")
+})
+
 module.exports = router;
