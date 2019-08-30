@@ -6,7 +6,11 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 
-router.get('/Professor', (req, res, next) => {
+// router.get('/', function(req, res, next) {
+//     res.render('index', { title: 'Express' });
+// });
+
+router.get('/professor', (req, res, next) => {
     res.render('professor/professor_0100');
 });
 
