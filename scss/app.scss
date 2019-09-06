@@ -62,3 +62,43 @@ footer {
 .footer-text {
     font-size: smaller
 }
+
+//  zoom in & out
+.zoom-in,
+.zoom-out {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: inherit;
+        background-size: cover;
+        transform-origin: center;
+        transition: transform .4s ease-in-out;
+    }
+}
+
+.zoom-in {
+    &:focus,
+    &:hover {
+        &::after {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.zoom-out {
+    &::after {
+        transform: scale(1.05);
+    }
+    &:focus,
+    &:hover {
+        &::after {
+            transform: scale(1);
+        }
+    }
+}
+
+// zoom in & out 끝
