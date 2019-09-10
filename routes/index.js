@@ -18,7 +18,7 @@ router.get('/professor', (req, res, next) => {
     res.render('professor/professor_0100');
 });
 
-router.get('/professor/research_paper', (req, res, next) => {
+router.get('/professor/research-paper', (req, res, next) => {
     res.render('professor/professor_0200');
 });
 
