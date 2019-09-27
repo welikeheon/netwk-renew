@@ -22,17 +22,8 @@ router.get('/professor/research-paper', (req, res, next) => {
     res.render('professor/professor_0200');
 });
 
-router.get('/getpaper', (req, res, next) => {
-    var options = {
-        'uri': 'http://netwk.hannam.ac.kr/hak-non.html',
-        'encoding': 'binary'
-    }
-
-    request(options, (rror, response, body) => {
-        var result = iconv.decode(body, 'utf-8');
-        let $ = cheerio.load(result);
-
-    })
+router.get('/professor/books', (req, res, next) => {
+    res.render('professor/professor_0300');
 });
 
 router.get('/e-campus', (req, res, next) => {
